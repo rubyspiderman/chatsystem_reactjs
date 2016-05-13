@@ -1,0 +1,41 @@
+{
+  "name": "matrix-react-sdk",
+  "version": "0.0.2",
+  "description": "SDK for matrix.org using React",
+  "author": "matrix.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matrix-org/matrix-react-sdk"
+  },
+  "license": "Apache-2.0",
+  "main": "lib/index.js",
+  "bin": {
+    "reskindex": "./reskindex.js"
+  },
+  "scripts": {
+    "build": "babel src -d lib --source-maps",
+    "start": "babel src -w -d lib --source-maps",
+    "clean": "rimraf lib",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "filesize": "^3.1.2",
+    "flux": "^2.0.3",
+    "glob": "^5.0.14",
+    "linkifyjs": "^2.0.0-beta.4",
+    "matrix-js-sdk": "^0.3.0",
+    "optimist": "^0.6.1",
+    "q": "^1.4.1",
+    "react": "^0.13.3",
+    "react-loader": "^1.4.0"
+  },
+  "//deps": "The loader packages are here because webpack in a project that depends on us needs them in this package's node_modules folder",
+  "//depsbuglink": "https://github.com/webpack/webpack/issues/1472",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "rimraf": "^2.4.3",
+    "json-loader": "^0.5.3",
+    "source-map-loader": "^0.1.5"
+  }
+}
